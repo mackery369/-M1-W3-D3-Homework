@@ -74,6 +74,24 @@
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
 
+  /* Half this number */
+
+  function divideNumber(num) {
+    var dividedNumber = num / 2;
+    document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + dividedNumber;
+  }
+
+  var halfButton = document.getElementById("half-button");
+  halfButton.addEventListener("click", function() {
+    var num = document.getElementById("half-input").value;
+    divideNumber(num);
+  })
+
+  /* Fraction,Whole */
+
+  /* Integer */
+
+  /* Area of Circle with Radius */
 
 </script>
 </body>
