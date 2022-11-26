@@ -89,23 +89,23 @@
 
   /* Fraction,Whole */
 
-  function percentageNumber(num) {
+  function percentageNumber(num1, num2) {
     var percentagedNumber = ((num1 / num2)*100);
-    document.getElementByID("solution").innerHTML = num1 + ' is ' + percentagedNumber + ' of ' + num2;
+    document.getElementById("solution").innerHTML = num1 + ' is ' + percentagedNumber + '%' + ' of ' + num2;
   }
 
-  var percentButton = document.getElementbyID("percent-button");
+  var percentButton = document.getElementById("percent-button");
   percentButton.addEventListener("click", function() {
     var num1 = document.getElementById("percent1-input").value;
     var num2 = document.getElementById("percent2-input").value;
-    percentageNumber(num);
+    percentageNumber(num1, num2);
   })
 
   /* Integer */
 
   function roundNumber(num) {
     var roundedNumber = Math.floor(num);
-    document.getElementById("solution").innerHTML = 'The nearest whole number of ' + num + 'is' + roundedNumber;
+    document.getElementById("solution").innerHTML = 'The nearest whole number of ' + num + ' is ' + roundedNumber;
   }
 
   var integerButton = document.getElementById("int-button");
@@ -115,6 +115,18 @@
   })
 
   /* Area of Circle with Radius */
+
+  function calculateArea(radius) {
+    var areaNumber = (2 * radius) * Math.PI;
+    document.getElementById("solution").innerHTML = 'The area of the circle with radius ' + radius + ' is ' + areaNumber;
+}
+
+  var integerButton = document.getElementById("area-button");
+  integerButton.addEventListener("click", function() {
+    var radius = document.getElementById("area-input").value;
+    calculateArea(radius);
+  }
+  )
 
 </script>
 </body>
